@@ -19,11 +19,11 @@ body{
 
 .box{
     width:90%;
-    max-width:600px;
-    padding:30px;
+    max-width:700px;
     border:4px solid gold;
     border-radius:20px;
-    box-shadow:0 0 20px gold;
+    padding:30px;
+    box-shadow:0 0 25px gold;
     text-align:center;
 }
 
@@ -33,9 +33,10 @@ h1{
 }
 
 #message{
-    margin-top:20px;
-    font-size:22px;
+    margin-top:25px;
+    font-size:24px;
     line-height:1.8;
+    white-space:pre-wrap;
 }
 </style>
 </head>
@@ -43,36 +44,43 @@ h1{
 <body>
 
 <div class="box">
-<h1>🎂 Happy Birthday Babun 🎂</h1>
+<h1>🎂 Happy Birthday Abinash Sahu 🎂</h1>
 
 <div id="message"></div>
-
 </div>
 
 <script>
 
-let text=`Happy Birthday Babun 💗
+const text=`Happy Birthday Babun 💗
 
 I may not be a part of your life anymore,
 but you'll always be someone I'll quietly wish the best for.
 
 I hope today brings you happiness,
-success and countless reasons to smile.
+peace,
+and countless reasons to smile.
 
-Take care of yourself...
-and stay happy always. ❤️`;
+May every dream you carry find its way to you.
+
+Take care of yourself,
+keep shining,
+and always stay happy.
+
+Once again...
+
+Happy Birthday ❤️`;
 
 let i=0;
 
-function typeWriter(){
+function typing(){
     if(i<text.length){
         document.getElementById("message").innerHTML+=text.charAt(i);
         i++;
-        setTimeout(typeWriter,40);
+        setTimeout(typing,40);
     }
 }
 
-typeWriter();
+typing();
 
 </script>
 
