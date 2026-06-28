@@ -1,7 +1,7 @@
 const photos = [
-"https://picsum.photos/600/600?random=1",
-"https://picsum.photos/600/600?random=2",
-"https://picsum.photos/600/600?random=3",
-"https://picsum.photos/600/600?random=4",
-"https://picsum.photos/600/600?random=5"
+  "75677.jpg",
+  "75678.jpg",
+  "75679.jpg",
+  "75680.jpg",
+  "75681.jpg"
 ];
