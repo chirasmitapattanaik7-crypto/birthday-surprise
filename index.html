@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Babun ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+overflow:hidden;
+text-align:center;
+}
+
+#start{
+position:fixed;
+width:100%;
+height:100vh;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:10;
+}
+
+button{
+padding:18px 35px;
+font-size:20px;
+border:none;
+border-radius:40px;
+background:gold;
+color:black;
+cursor:pointer;
+box-shadow:0 0 20px gold;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#main{
+display:none;
+padding:30px;
+animation:fade 2s;
+}
+
+h1{
+font-size:45px;
+color:gold;
+margin-top:20px;
+}
+
+p{
+font-size:22px;
+margin:25px;
+line-height:35px;
+color:white;
+}
+
+img{
+width:300px;
+height:400px;
+object-fit:cover;
+border-radius:20px;
+border:4px solid gold;
+box-shadow:0 0 25px gold;
+margin-top:20px;
+}
+
+@keyframes fade{
+from{
+opacity:0;
+}
+to{
+opacity:1;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="start">
+
+<h1 style="color:white;">
+✨ Tap to Open Your Birthday Surprise 🎁
+</h1>
+
+<br>
+
+<button onclick="openGift()">
+Open Gift 🎁
+</button>
+
+</div>
+
+<div id="main">
+
+<h1>
+🎂 Happy Birthday Abinash Sahu 🎂
+</h1>
+
+<img id="photo" src="photo1.jpg">
+
+<p id="message"></p>
+<script>
+
+let photos=[
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg"
+];
+
+let i=0;
+
+let text=`Happy Birthday babun💗.
+
+I may not be a part of your life anymore,
+but you'll always be someone I'll quietly wish the best for.
+
+I hope today brings you all the happiness you deserve.
+
+Stay blessed. 🤍
+
+— Chirasmita`;
+
+function openGift(){
+
+document.getElementById("start").style.display="none";
+document.getElementById("main").style.display="block";
+
+typeWriter();
+
+setInterval(changePhoto,3000);
+
+}
+
+function changePhoto(){
+
+i++;
+
+if(i>=photos.length){
+
+i=0;
+
+}
+
+document.getElementById("photo").src=photos[i];
+
+}
+
+let n=0;
+
+function typeWriter(){
+
+if(n<text.length){
+
+document.getElementById("message").innerHTML+=text.charAt(n);
+
+n++;
+
+setTimeout(typeWriter,45);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
